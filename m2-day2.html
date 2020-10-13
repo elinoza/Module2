@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--
+ASSIGNMENT RULES
+- The solution must be pushed to the repository and be available for the tutors by the end of the day.
+- You can ask for tutor's help.
+- You can google / use StackOverflow BUT we suggest you to use just the material provided.
+- To test the page, just open it with your default browser.
+- Use Bootstrap4 classes to render the page.
+- Use correctly containers and rows in order to achieve a great display.
+ASSIGNMENT TOPIC
+You are creating a website to showcase your favourite music albums.
+In this page you'd like to have a short bio of yourself, the top albums of your life, 
+the worst album you ever listen to and everything related to the music you love.
+NOTE:
+Most of the times, even the most expert of designers needs inspiration.
+Spend 30 minutes surfing the web and searching for the way of rapresenting album that you like the most.
+Could be the Amazon way, the Spotify or Apple music way or some other blog out there.
+-->
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- IMPORT ALL THE BOOTSTRAP RELATED CSS & SCRIPTS-->
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+      /* EXERCISE 1
+            For all Albums we'd like to have a consistent style.
+            Create a class for:
+            - The album container
+            - The album cover
+            - The album title
+            - The album group / singer / dj
+            - The album genre
+            - The album duration
+            - etc    
+         */
+         .col {
+        height:10rem;
+      }
+        .albumContainer
+        .albumCover
+        .albumTitle
+        .albumOwner
+        .albumGenre
+
+    </style>
+  </head>
+  <body>
+    <!-- EXERCISE 2 
+            Implement a navigation bar using the bootstrap component
+            This navigation bar must be linked to every section in your page
+        -->
+
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">My Music Taste!</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid mt-4">
+  <div class="container ">
+    <h1 class="display-4 ">Hello Aliens!</h1>
+    <p class="lead">Welcome to my universe. Here you will find a bunch of albums which I'm fond'of or do hate of. It is free to hate me if I put your favorite album to #myhatelist by the way.</p>
+  </div>
+</div>
+        
+
+    <!-- EXERCISE 3
+            Create a responsive section for your favourite albums.
+            In this section you should have:
+            - 4 albums per row when the screen is very large
+            - 3 albums per row when you are on a tablet (or a smaller window)
+            - 2 albums per row when you are on a small screen
+        -->
+    <h4>My Favorite Albums! <span class="badge badge-secondary">Have a look</span></h4>
+    <div class="row ">
+    <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+   
+    
+
+    </div>
+
+    <!-- EXERCISE 4
+            Create a section for the album review.
+            Pick one of your fav albums, and create a section with:
+            - Cover
+            - Title
+            - Band
+            - Lenght
+            - Genre
+            - Tracklist
+            - ... And whatever you think it's interesting about it!
+  
+ <h4>Album Review <span class="badge badge-secondary ">Have a look</span></h4>      -->
+  <div class="card mb-3 mt-5 p-4 mw-100 overflow-auto" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4 cover">
+      <img src="data:image/jpeg;base64,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" class="card-img" alt="...">
+    </div>
+    <div class="col-md-8  ">
+      <div class="card-body ">
+        <h5 class="card-title title">Coldplay-Parachutes</h5>
+        <p class="card-text ">"Parachutes (album)" redirects here. For the Frank Iero and the Patience album, see Parachutes (Frank Iero and the Patience album).
+Parachutes
+A close-up photograph of a yellow globe in a darkened room. The globe is spinning and illuminated from the inside. The words "COLDPLAY • PARACHUTES" are written in white text above the globe.
+Studio album by Coldplay
+Released	10 July 2000
+Recorded	November 1999 – May 2000
+Studio	
+Various[show]
+Genre	
+Alternative rockpost-Britpop
+Length	41:29
+Label	Parlophone
+Producer	
+Chris AllisonColdplayKen Nelson
+Coldplay chronology
+The Blue Room
+(1999)	Parachutes
+(2000)	Acoustic EP
+(2000)
+Singles from Parachutes
+"Shiver"
+Released: 6 March 2000
+"Yellow"
+Released: 26 June 2000
+"Trouble"
+Released: 23 October 2000
+"Don't Panic"
+Released: 19 March 2001
+Parachutes is the debut studio album by the British rock band Coldplay. It was released on 10 July 2000 by Parlophone in the United Kingdom. The album was produced by the band and British record producer Ken Nelson, except for one track, "High Speed", which was produced by Chris Allison. Parachutes has spawned the singles "Shiver", "Yellow", "Trouble", and "Don't Panic".</p>
+        <p class="card-text band">Coldplay</p>
+        <p class="card-text length">10 Song, 41 minutes</p>
+        <p class="card-text genre">post-Britpop</p>        
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+    <!-- EXERCISE 5
+            Worst album list! Find out the music you don't really like or you find overrated and list it
+            in this "hall of shame" chart!
+        -->
+
+        <h4>My Hate Club! <span class="badge badge-secondary">Have a look</span></h4>
+    <div class="row ">
+    <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/2x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+            <div class="col col-6 col-md-4 col-lg-3  ">col
+        <img
+              src="http://placehold.it/300x200"
+              class="card-img-top"
+              alt="..."
+            />
+            </div>   
+   
+    
+
+    </div>
+
+    <!-- EXERCISE 6
+            Do you have any musician / band you admire or you are fan of?
+            This section is dedicated to him / her / them!
+            Feel free to experiment in this part of the page.
+        -->
+
+        <div class="card text-center mt-4 mw-100">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Sigur Ros</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Camera Obscura</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+  </div>
+  <div class="card-body ">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+    <!-- EXERCISE 7
+            Just covers!
+            Create a tapestry of album pictures. Every album picture must be "square" (use CSS to do that).
+            Put at least 20 covers (also repeated) to have a nice effect and see how Bootstrap handles it.
+        -->
+
+    <!-- EXERCISE 8
+            Implement a footer with some information / social links
+        -->
+
+    <!-- EXTRA:
+         EXERCISE 9
+            Create album details that are going to be toggled on and off by clicking on the album image
+        -->
+
+    <!-- EXERCISE 10
+            Add a button to each section. By clicking on it the section body appears (if hidden) or disappears (if visible)
+        -->
+
+    <!--
+            EXERCISE 11
+            Add in the footer a field that counts, on page load, how many ALBUMS are on the page 
+        -->
+
+    </div>
+
+    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+    
+  </body>
+</html>
