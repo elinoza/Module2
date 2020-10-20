@@ -26,55 +26,55 @@
             EX9) Write a selector to target the "back to top" link     #### EXTRA Try doing it without targeting the footer element directly
             EX10) Write a selector to target the footer
         */
+      /* 1 */
+      div.jumbotron h1 {
+        text-decoration: underline;
+      }
+      /* 2 */
+      nav a {
+        background-color: snow;
+        margin-right: 2px;
+      }
+      /* 3 */
+      div.jumbotron p > a {
+        border-bottom: solid 2px pink;
+      }
+      /* 4 */
+      .blog-main div:first-of-type {
+        background-color: wheat;
+        padding: 20px;
+      }
+      /* 5 */
+      div.container nav a:nth-child(even) {
+        border: dashed 1px yellow;
+      }
 
-        div.jumbotron h1 { text-decoration: underline;}
-        nav  a {
-            background-color:snow;
-            margin-right:2px;
-           
-        }
-        div.jumbotron p>a{ 
-            border-bottom:solid 2px pink
-        }
-
-        .blog-main div:first-of-type{
-            background-color:wheat;
-            padding:20px;
-        }
-
-        div.container  nav a:nth-child(even) {
-            border:dashed 1px yellow}
-
-
-        .blog-main div:last-of-type{
-            background-color:rgb(236, 221, 132);
-            padding:20px;
-        }
-
-        aside.blog-sidebar div:nth-child(2) ol li{
-
-            background-color: rgb(233, 223, 223);  
-        }
-
-        div.blog-main div:nth-of-type(2) p:first-of-type a{
-            color:tomato;
-            font-weight:bold;
-            font-style: italic;
-            font-family:fantasy;
-        }
-
-        .blog-footer p:last-of-type  a[href]{
-            font-family:fantasy;
-            color:tomato;
-            border: solid 2px tomato;
-        }
-
-        footer {
-            border:dashed gray
-        }
-       
-
-
+      /* 6 */
+      .blog-main div:last-of-type {
+        background-color: rgb(236, 221, 132);
+        padding: 20px;
+      }
+      /* 7 */
+      aside.blog-sidebar div:nth-child(2) ol li {
+        background-color: rgb(233, 223, 223);
+      }
+      /* 8 */
+      div.blog-main div:nth-of-type(2) p:first-of-type a {
+        color: tomato;
+        font-weight: bold;
+        font-style: italic;
+        font-family: fantasy;
+      }
+      /* 9*/
+      .blog-footer p:last-of-type a[href] {
+        font-family: fantasy;
+        color: tomato;
+        border: solid 2px tomato;
+      }
+      /* 10 */
+      footer {
+        border: dashed gray;
+      }
     </style>
     <meta charset="utf-8" />
     <meta
@@ -502,46 +502,102 @@
         EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
     */
+      /* 11 */
+      function linkToNavBar() {
+        let newLink = document.createElement("a");
+        newLink.innerText = "New ";
+        newLink.className = "p-2 text-muted";
+        document.querySelector("nav").appendChild(newLink);
+      }
 
-    function linkToNavBar() {
-    let newLink=document.createElement('a')
-    newLink.innerText="New "
-    newLink.className="p-2 text-muted"
-    document.querySelector('nav').appendChild(newLink)
-    }
-    function removeSearchIcon(){
-      removeChild.document.querySelectorAll('.container div.row div:last-of-type svg')
-    }
-    function changeJumbo(){
-        document.querySelector('div.jumbotron').classList.remove('bg-dark')
-        document.querySelector('div.jumbotron').style.backgroundColor = "#e8d07b"
-    }
-    function changeMainTitle(){
-    document.querySelector('div.jumbotron h1').innerText= "Less is More Gurlz"
-    }
+      ///* 12 */
+      const removeSearchIcon = function () {
+        const glass = document.querySelector(".blog-header svg");
+        glass.remove();
+      };
 
-    function changeCols(){
-        document.querySelectorAll('div.jumbotron+div.row> div')[0].className="col-md-12"
-        document.querySelectorAll('div.jumbotron+div.row> div')[1].className="col-md-12"
-        document.querySelectorAll('div.jumbotron+div.row> div')[0].classList.remove="col-md-6"
-        document.querySelectorAll('div.jumbotron+div.row> div')[1].classList.remove="col-md-6"
-    }
+      /* 13 */
+      function changeJumbo() {
+        document.querySelector("div.jumbotron").classList.remove("bg-dark");
+        document.querySelector("div.jumbotron").style.backgroundColor =
+          "#e8d07b";
+      }
+      /* 14 */
+      function changeMainTitle() {
+        document.querySelector("div.jumbotron h1").innerText =
+          "Less is More Gurlz";
+      }
 
-    //below remove task doesnt work :()
-    function changeMainTitle(){
-        for(let i=0; i<document.querySelectorAll('aside.blog-sidebar div:nth-child(3) ol li a').length;i++)
-         {document.querySelectorAll('aside.blog-sidebar div:nth-child(3) ol li a')[i].innerText= ""}
-    }
-    function deleteChars(){
-    document.querySelectorAll('.blog-main div:nth-of-type(1) p:not(.blog-post-meta)')[0].innerText.slice(50,-1)
-    }
+      /* 15  */
+      function changeCols() {
+        let allh2s = document.querySelectorAll(".blog-post h2");
+        for (let i = 0; i < allh2s.length; i++) {
+          allh2s[i].classList.add("col-4");
+        }
+      }
 
+      /* 16*/
 
-    
-    
+      function removeList() {
+        let allToRemove = document.querySelectorAll(".list-unstyled")[1];
+        allToRemove.remove();
+      }
 
+      /* it doesnt work!!! 17*/
 
+      const deleteChars = function () {
+        const everyFirstP = document.querySelectorAll(
+          ".blog-post p:nth-of-type(2)"
+        );
+        for (let i = 0; i > everyFirstP.length; i++) {
+          everyFirstP[i].innerText = everyFirstP[i].innerText.slice(0, 50);
+        }
+      };
 
+      /*  EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title) */
+
+      document
+        .querySelector("nav.blog-pagination .btn:last-of-type")
+        .addEventListener("click", newer);
+
+      function newer() {
+        let newDiv = document.createElement("div");
+        let newh2 = document.createElement("h2");
+        newDiv.className = "blog-post";
+        newh2.className = "blog-post-title";
+        document.querySelector(".blog-main").appendChild(newDiv);
+        document
+          .querySelector(".blog-main div.blog-post:last-of-type")
+          .appendChild(newh2);
+      }
+
+      /*  EX19) */
+
+      document
+        .querySelector("nav.blog-pagination .btn:first-of-type")
+        .addEventListener("click", older);
+
+      function older() {
+        let newDiv = document.querySelector(
+          ".blog-main div.blog-post:last-of-type"
+        );
+
+        document.querySelector(".blog-main").removeChild(newDiv);
+      }
+      /*  EX20) */
+      document
+        .querySelector("div.blog-main div:nth-of-type(1) p:first-of-type a")
+        .addEventListener("mousemove", authorHover);
+      document
+        .querySelector("div.blog-main div:nth-of-type(2) p:first-of-type a")
+        .addEventListener("mousemove", authorHover);
+      document
+        .querySelector("div.blog-main div:nth-of-type(3) p:first-of-type a")
+        .addEventListener("mousemove", authorHover);
+
+      function authorHover() {
+        alert("hover!");
+      }
     </script>
   </body>
 </html>
