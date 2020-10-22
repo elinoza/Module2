@@ -31,7 +31,8 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
           top:-15px;
           left:-25px;
       }
-      
+
+    
     </style>
   </head>
   <body>
@@ -141,7 +142,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             My Favorite Albums!
             <span class="badge badge-secondary">Have a look</span>
           </h4>
-          <div class="row row-cols-1 row-cols-md-3  row-cols-lg-4 ">
+          <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 ">
             <div
               class="col  mt-2 mb-2 title shadow-sm p-3 mb-5 "
             >
@@ -283,6 +284,63 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                 </tbody>
               </table>
         </div>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <form>
+                                <div class="form-group">
+                                <label for="formGroupExampleInput"> Track Number </label>
+                                <input type="text" class="form-control" id="Input1" placeholder="Please type track number ">
+                                </div>
+                                <div class="form-group">
+                                <label for="formGroupExampleInput2">Track name</label>
+                                <input type="text" class="form-control" id="Input2" placeholder="Please type track name">
+                                </div>
+                               
+                            </form>
+                        </div>
+                        <div class="col">
+                            <form>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Track length</label>
+                                    <input type="text" class="form-control" id="Input3" placeholder="Please type track length">
+                                    </div>
+                                    <div class="form-group">
+                                    <label for="formGroupExampleInput2">Track featuring</label>
+                                    <input type="text" class="form-control" id="input4" placeholder="Please type track featuring">
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-3">
+                                        <input type="checkbox" class="custom-control-input" id="checkbox1" required>
+                                        <label class="custom-control-label" for="customControlValidation1">Live Track</label>
+                                        <div class="invalid-feedback">Example invalid feedback text</div>
+                                      </div>
+                            </form>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=clearTheModal()>Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
     <!-- EXERCISE 6
             Add a DELETE bootstrap button on each row of the tracklist, with appropriate transitions on the various pseudo-class states 
@@ -337,7 +395,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             - Live Track (checkbox)
             The fields should be inside an Input Group and divided in 2 columns.
         -->
-
+        
     <!-- EXERCISE 11
             Add 2 bootstrap buttons at the bottom of the modal window:
             - Close => clear the fields and close the modal
@@ -374,10 +432,36 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
         -->
 
 <script>
-     const displaySt= function(x) {
-        document.querySelectorAll('table tbody tr')[0].style.display = "none"
+    
+   document.getElementById("btn1").addEventListener("click", function() {
+    document.querySelector('table tbody tr:nth-of-type(1)').style.display = "none"
+   })
+   document.getElementById("btn2").addEventListener("click", function() {
+    document.querySelector('table tbody tr:nth-of-type(2)').style.display = "none"
+   })
+
+   document.getElementById("btn3").addEventListener("click", function() {
+    document.querySelector('table tbody tr:nth-of-type(3)').style.display = "none"
+   })
+
+   document.getElementById("btn4").addEventListener("click", function() {
+    document.querySelector('table tbody tr:nth-of-type(4)').style.display = "none"
+   })
+
+   document.getElementById("btn5").addEventListener("click", function() {
+    document.querySelector('table tbody tr:nth-of-type(5)').style.display = "none"
+   })
+
+   const clearTheModal= function()  { 
+       document.getElementById('Input1').innerText=""
+       document.getElementById('Input2').innerText=""
+       document.getElementById('Input3').innerText=""
+       document.getElementById('Input4').innerText=""
+       document.getElementById('Input5').innerText=""
+       
+
    }
-   document.getElementById("btn1").addEventListener("click", displaySt())
+
 
    
   
