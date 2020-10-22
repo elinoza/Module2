@@ -249,30 +249,34 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
                     <th scope="row">1</th>
                     <td>Scientiest</td>
                     <td>3:25</td>
-                    
+                    <td><button type="button" id="btn1" class="btn btn-secondary btn-sm">remove</button></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>Fix You</td>
                     <td>3:05</td>
+                    <td><button type="button" id="btn2" class="btn btn-secondary btn-sm">remove</button></td>
                     
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Fix You</td>
                     <td>3:05</td>
+                    <td><button type="button" id="btn3" class="btn btn-secondary btn-sm">remove</button></td>
                     
                   </tr>
                   <tr>
                     <th scope="row">4</th>
                     <td>Fix You</td>
                     <td>3:05</td>
+                    <td><button type="button" id="btn4"  class="btn btn-secondary btn-sm">remove</button></td>
                     
                   </tr>
                   <tr>
                     <th scope="row">5</th>
                     <td>Fix You</td>
                     <td>3:05</td>
+                    <td><button type="button" id="btn5"  class="btn btn-secondary btn-sm">remove</button></td>
                     
                   </tr>
                 
@@ -287,6 +291,7 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             Add a fade-out effect using a CSS transition effect
         -->
 
+
     <!-- EXERCISE 7
             Add a "Contact Me" form in the footer.
             The "Contact Me" form has 2 fields:
@@ -295,18 +300,19 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             Use the correct Bootstrap styles for styling the buttons
         -->
         <footer>
-            <div class="container  ">
+            <div class="container  mt-5 ">
                     
-                <form >
-                    <div class="form-group">
+                <form  class="  d-flex flex-column justify-content-between align-items-center shadow " style="background-color:#fdfaf3" >
+                    <h1 class="text-center m-3"> CONTACT FORM</h1>
+                    <div class="form-group ">
                         <label for="exampleFormControlInput1">Email address</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                        <input type="email" class="form-control" id="exampleFormControlInput1"  style="width:400px"placeholder="name@example.com">
                     </div>
 
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Your Message</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" style="width:400px"rows="3"></textarea>
                     </div>
                 </form>
         
@@ -367,7 +373,15 @@ Could be the Amazon way, the Spotify or Apple music way or some other blog out t
             Make every section of the page "collapsable" if the user clicks on the section title
         -->
 
+<script>
+     const displaySt= function(x) {
+        document.querySelectorAll('table tbody tr')[0].style.display = "none"
+   }
+   document.getElementById("btn1").addEventListener("click", displaySt())
 
+   
+  
+</script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
